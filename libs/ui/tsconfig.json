@@ -2,7 +2,7 @@
   "extends": "@repo/typescript-config/library",
   "include": [
     "src"
-  ],
+, "../../apps/web-main/src/presentation/components/MediaCard.tsx"  ],
   "exclude": [
     "node_modules",
     "dist"

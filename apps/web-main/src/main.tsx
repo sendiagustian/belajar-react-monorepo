@@ -1,6 +1,12 @@
-import "./assets/css/base.css";
-import React from "react";
 import { createRoot } from "react-dom/client";
-import App from "./presentation/App";
+// import './index.css'
+import App from "./presentation/App.tsx";
+import { CssBaseline, ThemeProvider } from "@repo/ui/MaterialUI";
+import { webMainTheme } from "@repo/ui/core/themes/WebMainTheme";
 
-createRoot(document.getElementById("root")!).render(<App />);
+createRoot(document.getElementById("root")!).render(
+    <ThemeProvider theme={webMainTheme}>
+        <CssBaseline />
+        <App />
+    </ThemeProvider>
+);

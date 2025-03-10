@@ -5,11 +5,10 @@
     "src"
   ],
   "compilerOptions": {
-    "jsx": "react",
     "outDir": "dist"
   },
   "exclude": [
-    "dist",
     "node_modules",
+    "dist"
   ],
 }
