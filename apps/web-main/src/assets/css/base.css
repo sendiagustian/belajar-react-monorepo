@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+main {
+    width: 90%;
+    max-width: 65rem;
+}

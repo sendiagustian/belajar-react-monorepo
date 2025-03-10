@@ -1,0 +1,15 @@
+{
+    "name": "@repo/style-config",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "exports": {
+        "./tailwind": "./tailwind.config.mjs",
+        "./postcss": "./postcss.config.mjs"
+    },
+    "dependencies": {
+        "@tailwindcss/postcss": "^4.0.12",
+        "postcss": "^8.1.0",
+        "autoprefixer": "^10.4.20"
+    }
+}
