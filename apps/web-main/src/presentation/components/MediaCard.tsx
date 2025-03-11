@@ -14,7 +14,13 @@ interface MediaCardProps {
     linkProject?: string;
 }
 
-export const MediaCard: React.FC<MediaCardProps> = ({ route, image, title, subtitle, linkProject }) => {
+export const MediaCard: React.FC<MediaCardProps> = ({
+    route,
+    image,
+    title,
+    subtitle,
+    linkProject,
+}) => {
     return (
         <Card sx={{ width: 250, display: "flex", flexDirection: "column" }} elevation={4}>
             <CardMedia sx={{ height: 150 }} image={image} title={title} />

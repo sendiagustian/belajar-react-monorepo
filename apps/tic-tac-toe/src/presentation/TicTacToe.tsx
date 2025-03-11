@@ -11,7 +11,10 @@ import Players from "./components/Players";
 import Header from "./components/Header";
 
 const TicTacToe: React.FC = () => {
-    const [players, setPlayers] = useState<{ X: string; O: string }>({ X: "Player 1", O: "Player 2" });
+    const [players, setPlayers] = useState<{ X: string; O: string }>({
+        X: "Player 1",
+        O: "Player 2",
+    });
     const [gameTurns, setGameTurns] = useState<LogTurnModel[]>([]);
 
     let activePlayer = driveActivePlayer(gameTurns);
@@ -80,7 +83,9 @@ const TicTacToe: React.FC = () => {
                             changeName={handlePlayerNameChange}
                         />
                     </Players>
-                    {(winner || hasDraw) && <GameOver winner={winner} players={players} handleRematch={resetGame} />}
+                    {(winner || hasDraw) && (
+                        <GameOver winner={winner} players={players} handleRematch={resetGame} />
+                    )}
                     <GameBoard gameTurns={gameTurns} onSelectedSquare={handleSelectedSquare} />
                 </GameContainer>
                 <LogTurn log={gameTurns} />

@@ -1,0 +1,6 @@
+# Abaikan semua kecuali /src
+!src
+node_modules
+dist
+build
+public

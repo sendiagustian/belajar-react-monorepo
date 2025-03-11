@@ -8,7 +8,13 @@ export const Header: React.FC = () => {
         <AppBar position="fixed">
             <Container>
                 <Toolbar>
-                    <Typography variant="h5" component="div" color="white" fontWeight={500} sx={{ flexGrow: 1 }}>
+                    <Typography
+                        variant="h5"
+                        component="div"
+                        color="white"
+                        fontWeight={500}
+                        sx={{ flexGrow: 1 }}
+                    >
                         The Results React Courses
                     </Typography>
                     <Button variant="contained" sx={{ color: "white", fontWeight: 500 }}>

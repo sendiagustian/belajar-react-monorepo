@@ -15,7 +15,10 @@ const App: React.FC = () => {
 
     const validNotNegative = (input: InvestmentModel) => {
         return (
-            input.initialInvestment > 0 && input.annualInvestment > 0 && input.expectedReturn > 0 && input.duration > 0
+            input.initialInvestment > 0 &&
+            input.annualInvestment > 0 &&
+            input.expectedReturn > 0 &&
+            input.duration > 0
         );
     };
 
@@ -32,7 +35,8 @@ const App: React.FC = () => {
     let showResults = false;
 
     if (!validNotNegative(formInput)) {
-        errorMessages = "Please input positive numbers only and make sure all fields not empty or zero.";
+        errorMessages =
+            "Please input positive numbers only and make sure all fields not empty or zero.";
     } else {
         errorMessages = null;
         showResults = true;

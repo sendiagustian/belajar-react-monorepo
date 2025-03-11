@@ -11,7 +11,8 @@ const Results: React.FC<ResultsProps> = ({ input }) => {
     let initialInvestment = 0;
 
     if (results.length > 0) {
-        initialInvestment = results[0].valueEndOfYear - results[0].interest - results[0].annualInvestment;
+        initialInvestment =
+            results[0].valueEndOfYear - results[0].interest - results[0].annualInvestment;
     }
 
     return (
@@ -28,7 +29,9 @@ const Results: React.FC<ResultsProps> = ({ input }) => {
             <tbody>
                 {results.map((yearData) => {
                     const totalInterest =
-                        yearData.valueEndOfYear - yearData.annualInvestment * yearData.year - initialInvestment;
+                        yearData.valueEndOfYear -
+                        yearData.annualInvestment * yearData.year -
+                        initialInvestment;
 
                     const totalAmountInvestmet = yearData.valueEndOfYear - totalInterest;
 

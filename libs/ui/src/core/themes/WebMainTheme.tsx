@@ -1,5 +1,11 @@
 import { cyan, grey, red } from "@mui/material/colors";
-import { BreakpointsOptions, PaletteOptions, Shadows, alpha, responsiveFontSizes } from "@mui/material/styles";
+import {
+    BreakpointsOptions,
+    PaletteOptions,
+    Shadows,
+    alpha,
+    responsiveFontSizes,
+} from "@mui/material/styles";
 import createTheme from "@mui/material/styles/createTheme";
 import { TypographyOptions } from "@mui/material/styles/createTypography";
 

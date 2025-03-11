@@ -16,14 +16,18 @@ export const checkWinner = (turns: LogTurnModel[]): string | null => {
     const oTurns = turns.filter((turn) => turn.palayer === "O").map((turn) => turn.square);
 
     const isXWinner = WINNING_COMBINATIONS.some((combination) =>
-        combination.every((pos) => xTurns.some((move) => move.row === pos.row && move.col === pos.col))
+        combination.every((pos) =>
+            xTurns.some((move) => move.row === pos.row && move.col === pos.col)
+        )
     );
 
     if (isXWinner) return "X";
 
     // Cek apakah pemain O menang
     const isOWinner = WINNING_COMBINATIONS.some((combination) =>
-        combination.every((pos) => oTurns.some((move) => move.row === pos.row && move.col === pos.col))
+        combination.every((pos) =>
+            oTurns.some((move) => move.row === pos.row && move.col === pos.col)
+        )
     );
 
     if (isOWinner) return "O";

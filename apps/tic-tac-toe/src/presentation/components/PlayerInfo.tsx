@@ -15,7 +15,13 @@ const PlayerInfo: React.FC<PlayerInfoProps> = ({ initialName, symbol, isActive, 
 
     if (isEditing) {
         displayPlayerName = (
-            <input className="player-input" type="text" required value={playerName} onChange={handleChange} />
+            <input
+                className="player-input"
+                type="text"
+                required
+                value={playerName}
+                onChange={handleChange}
+            />
         );
     }
 

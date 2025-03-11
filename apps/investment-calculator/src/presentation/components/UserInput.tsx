@@ -16,7 +16,9 @@ const UserInput: React.FC<UserInputProps> = ({ formInput, handleInputChange }) =
                         required
                         type="number"
                         value={formInput.initialInvestment}
-                        onChange={(event) => handleInputChange("initialInvestment", Number(event.target.value))}
+                        onChange={(event) =>
+                            handleInputChange("initialInvestment", Number(event.target.value))
+                        }
                     />
                 </p>
                 <p>
@@ -25,7 +27,9 @@ const UserInput: React.FC<UserInputProps> = ({ formInput, handleInputChange }) =
                         required
                         type="number"
                         value={formInput.annualInvestment}
-                        onChange={(event) => handleInputChange("annualInvestment", Number(event.target.value))}
+                        onChange={(event) =>
+                            handleInputChange("annualInvestment", Number(event.target.value))
+                        }
                     />
                 </p>
             </div>
@@ -36,7 +40,9 @@ const UserInput: React.FC<UserInputProps> = ({ formInput, handleInputChange }) =
                         required
                         type="number"
                         value={formInput.expectedReturn}
-                        onChange={(event) => handleInputChange("expectedReturn", Number(event.target.value))}
+                        onChange={(event) =>
+                            handleInputChange("expectedReturn", Number(event.target.value))
+                        }
                     />
                 </p>
                 <p>
@@ -45,7 +51,9 @@ const UserInput: React.FC<UserInputProps> = ({ formInput, handleInputChange }) =
                         required
                         type="number"
                         value={formInput.duration}
-                        onChange={(event) => handleInputChange("duration", Number(event.target.value))}
+                        onChange={(event) =>
+                            handleInputChange("duration", Number(event.target.value))
+                        }
                     />
                 </p>
             </div>

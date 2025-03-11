@@ -19,6 +19,7 @@ export const Catalogues: React.FC = () => {
             >
                 {catalogues.map((catalogue) => (
                     <MediaCard
+                        key={catalogue.route}
                         route={catalogue.route}
                         image={catalogue.image}
                         title={catalogue.title}
