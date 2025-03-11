@@ -50,7 +50,7 @@ export const MediaCard: React.FC<MediaCardProps> = ({
                     size="small"
                     variant="contained"
                     sx={{ ":hover": { backgroundColor: "cyan[800]" }, color: "white" }}
-                    onClick={() => window.open(route, "_blank")}
+                    onClick={() => window.open(route)}
                 >
                     Visit
                 </Button>
@@ -58,7 +58,7 @@ export const MediaCard: React.FC<MediaCardProps> = ({
                     size="small"
                     variant="contained"
                     sx={{ ":hover": { backgroundColor: "cyan[800]" }, color: "white" }}
-                    onClick={() => window.open(linkProject, "_blank")}
+                    onClick={() => window.open(linkProject)}
                 >
                     Code
                 </Button>

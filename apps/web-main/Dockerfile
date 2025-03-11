@@ -6,7 +6,7 @@ COPY . ./
 
 RUN if ! command -v yarn > /dev/null; then npm install --global yarn; fi
 RUN yarn install --force
-RUN yarn run build
+RUN yarn run build --filter=./apps/web-main
 
 # production environment
 FROM nginx:stable-alpine

@@ -22,7 +22,7 @@ services:
         hostname: react-essentials
         restart: always
         ports:
-            - "5511"
+            - "5511:5511"
         networks:
             - app-network
 
@@ -34,7 +34,7 @@ services:
         hostname: tic-tac-toe
         restart: always
         ports:
-            - "5512"
+            - "5512:5512"
         networks:
             - app-network
 
@@ -46,6 +46,6 @@ services:
         hostname: investment-calculator
         restart: always
         ports:
-            - "5513"
+            - "5513:5513"
         networks:
             - app-network
