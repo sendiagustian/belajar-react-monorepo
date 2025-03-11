@@ -1,0 +1,19 @@
+# **Node Modules** (lebih baik di-install dalam container)
+node_modules
+.turbo
+.next
+.cache
+dist
+
+# **File konfigurasi lokal**
+.env
+.DS_Store
+.vscode
+.idea
+.git
+.github
+
+# **Log & Debug Files**
+npm-debug.log*
+yarn-error.log
+lerna-debug.log
