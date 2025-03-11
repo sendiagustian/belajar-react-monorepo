@@ -11,7 +11,7 @@ interface MediaCardProps {
     image: string;
     title: string;
     subtitle: string;
-    linkProject?: string;
+    linkProject: string;
 }
 
 export const MediaCard: React.FC<MediaCardProps> = ({
@@ -50,7 +50,7 @@ export const MediaCard: React.FC<MediaCardProps> = ({
                     size="small"
                     variant="contained"
                     sx={{ ":hover": { backgroundColor: "cyan[800]" }, color: "white" }}
-                    onClick={() => window.open(route)}
+                    onClick={() => (window.location.href = route)}
                 >
                     Visit
                 </Button>
