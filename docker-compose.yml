@@ -22,7 +22,7 @@ services:
         hostname: react-essentials
         restart: always
         expose:
-            - "80" # Hanya tersedia dalam network
+            - "5511:5511" # Hanya tersedia dalam network
         networks:
             - app-network
 
@@ -34,7 +34,7 @@ services:
         hostname: tic-tac-toe
         restart: always
         expose:
-            - "80" # Hanya tersedia dalam network
+            - "5512:5512" # Hanya tersedia dalam network
         networks:
             - app-network
 
@@ -46,6 +46,6 @@ services:
         hostname: investment-calculator
         restart: always
         expose:
-            - "80" # Hanya tersedia dalam network
+            - "5513:5513" # Hanya tersedia dalam network
         networks:
             - app-network
