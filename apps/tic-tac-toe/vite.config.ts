@@ -9,6 +9,5 @@ export default defineConfig({
         port: 5512,
         host: "0.0.0.0",
         strictPort: true,
-        allowedHosts: ["turbo-apps.sendistudio.id"],
     },
 });
