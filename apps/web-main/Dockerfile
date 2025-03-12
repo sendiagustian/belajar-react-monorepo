@@ -13,7 +13,6 @@ FROM nginx:stable-alpine
 WORKDIR /app
 
 COPY --from=build /app/apps/web-main/package.json /app/package.json
-COPY --from=build /app/apps/web-main/yarn.lock /app/yarn.lock
 COPY --from=build /app/apps/web-main/vite.config.ts /app/vite.config.ts
 
 RUN yarn install --force --production
