@@ -21,8 +21,8 @@ services:
         container_name: react-essentials
         hostname: react-essentials
         restart: always
-        expose:
-            - "5511" # Hanya tersedia dalam network
+        ports:
+            - "5511:5511" # Hanya tersedia dalam network
         networks:
             - app-network
 
@@ -33,8 +33,8 @@ services:
         container_name: tic-tac-toe
         hostname: tic-tac-toe
         restart: always
-        expose:
-            - "5512" # Hanya tersedia dalam network
+        ports:
+            - "5512:5512" # Hanya tersedia dalam network
         networks:
             - app-network
 
@@ -45,7 +45,7 @@ services:
         container_name: investment-calculator
         hostname: investment-calculator
         restart: always
-        expose:
-            - "5513" # Hanya tersedia dalam network
+        ports:
+            - "5513:5513" # Hanya tersedia dalam network
         networks:
             - app-network
