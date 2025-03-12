@@ -15,7 +15,7 @@ WORKDIR /app
 COPY --from=build /app/apps/web-main/package.json /app/package.json
 COPY --from=build /app/apps/web-main/vite.config.ts /app/vite.config.ts
 
-RUN yarn install --force --production
+RUN yarn install
 
 COPY --from=build /app/apps/web-main/dist /app/dist
 
