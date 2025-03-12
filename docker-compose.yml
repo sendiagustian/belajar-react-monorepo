@@ -10,7 +10,7 @@ services:
         hostname: web-main
         restart: always
         ports:
-            - "5510:5510"  # Tetap diekspos ke host
+            - "80:5510" # Tetap diekspos ke host
         networks:
             - app-network
 
@@ -22,7 +22,7 @@ services:
         hostname: react-essentials
         restart: always
         expose:
-            - "80"  # Hanya tersedia dalam network
+            - "80" # Hanya tersedia dalam network
         networks:
             - app-network
 
@@ -34,7 +34,7 @@ services:
         hostname: tic-tac-toe
         restart: always
         expose:
-            - "80"  # Hanya tersedia dalam network
+            - "80" # Hanya tersedia dalam network
         networks:
             - app-network
 
@@ -46,6 +46,6 @@ services:
         hostname: investment-calculator
         restart: always
         expose:
-            - "80"  # Hanya tersedia dalam network
+            - "80" # Hanya tersedia dalam network
         networks:
             - app-network
