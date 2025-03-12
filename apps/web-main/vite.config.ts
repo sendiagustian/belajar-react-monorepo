@@ -30,12 +30,14 @@ export default defineConfig(({ mode }) => {
             host: "0.0.0.0",
             strictPort: true,
             proxy: proxy,
+            allowedHosts: ["turbo-apps.sendistudio.id"],
         },
         preview: {
             port: 5510,
             host: "0.0.0.0",
             strictPort: true,
             proxy: proxy,
+            allowedHosts: ["turbo-apps.sendistudio.id"],
         },
     };
 });

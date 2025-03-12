@@ -23,4 +23,4 @@ COPY --from=build /app/package.json /app/package.json
 
 EXPOSE 5510
 
-CMD ["yarn", "run", "start"]
+CMD ["yarn", "run", "start:web-main"]
