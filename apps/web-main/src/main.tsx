@@ -1,12 +1,14 @@
 import { createRoot } from "react-dom/client";
-// import './index.css'
-import App from "./presentation/App.tsx";
 import { CssBaseline, ThemeProvider } from "@repo/ui/MaterialUI";
 import { webMainTheme } from "@repo/ui/core/themes/WebMainTheme";
+import { BrowserRouter } from "react-router-dom";
+import AppRouter from "./presentation/AppRouter";
 
 createRoot(document.getElementById("root")!).render(
-    <ThemeProvider theme={webMainTheme}>
-        <CssBaseline />
-        <App />
-    </ThemeProvider>
+    <BrowserRouter>
+        <ThemeProvider theme={webMainTheme}>
+            <CssBaseline />
+            <AppRouter />
+        </ThemeProvider>
+    </BrowserRouter>
 );
