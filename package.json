@@ -10,7 +10,7 @@
         "libs/*"
     ],
     "scripts": {
-        "start": "yarn workspace @repo/web-main run vite preview",
+        "start:web-main": "yarn workspace @repo/web-main run vite preview",
         "build": "turbo run build",
         "build:clean": "turbo run prune --force",
         "dev": "turbo run dev",
