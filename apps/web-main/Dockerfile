@@ -20,6 +20,7 @@ COPY --from=build /app/yarn.lock /app/yarn.lock
 COPY --from=build /app/turbo.json /app/turbo.json
 COPY --from=build /app/package.json /app/package.json
 
-RUN cd /app/apps/web-main
 
 EXPOSE 5510
+
+CMD ["yarn", "run", "start"]
