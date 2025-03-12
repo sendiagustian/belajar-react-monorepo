@@ -5,6 +5,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import { useNavigate } from "react-router-dom";
 
 interface MediaCardProps {
     route: string;
@@ -21,6 +22,8 @@ export const MediaCard: React.FC<MediaCardProps> = ({
     subtitle,
     linkProject,
 }) => {
+    const navigate = useNavigate();
+
     return (
         <Card sx={{ width: 250, display: "flex", flexDirection: "column" }} elevation={4}>
             <CardMedia sx={{ height: 150 }} image={image} title={title} />
@@ -50,7 +53,7 @@ export const MediaCard: React.FC<MediaCardProps> = ({
                     size="small"
                     variant="contained"
                     sx={{ ":hover": { backgroundColor: "cyan[800]" }, color: "white" }}
-                    onClick={() => (window.location.href = route)}
+                    onClick={() => navigate(route)}
                 >
                     Visit
                 </Button>
