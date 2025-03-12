@@ -6,6 +6,8 @@ export default defineConfig({
     plugins: [react()],
     base: "/react-essentials/",
     server: {
-        port: 5511,
+        port: 80,
+        host: "0.0.0.0",
+        strictPort: true,
     },
 });

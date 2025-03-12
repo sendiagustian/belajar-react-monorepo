@@ -6,6 +6,8 @@ export default defineConfig({
     plugins: [react()],
     base: "/investment-calculator/",
     server: {
-        port: 5513,
+        port: 80,
+        host: "0.0.0.0",
+        strictPort: true,
     },
 });

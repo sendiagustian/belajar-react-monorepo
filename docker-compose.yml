@@ -10,9 +10,9 @@ services:
         hostname: web-main
         restart: always
         ports:
-            - "5510:5510"
+            - "5510:5510"  # Tetap diekspos ke host
         networks:
-            - app-network # Masukkan container ke dalam network
+            - app-network
 
     react-essentials:
         build:
@@ -21,8 +21,8 @@ services:
         container_name: react-essentials
         hostname: react-essentials
         restart: always
-        ports:
-            - "5511:5511"
+        expose:
+            - "80"  # Hanya tersedia dalam network
         networks:
             - app-network
 
@@ -33,8 +33,8 @@ services:
         container_name: tic-tac-toe
         hostname: tic-tac-toe
         restart: always
-        ports:
-            - "5512:5512"
+        expose:
+            - "80"  # Hanya tersedia dalam network
         networks:
             - app-network
 
@@ -45,7 +45,7 @@ services:
         container_name: investment-calculator
         hostname: investment-calculator
         restart: always
-        ports:
-            - "5513:5513"
+        expose:
+            - "80"  # Hanya tersedia dalam network
         networks:
             - app-network

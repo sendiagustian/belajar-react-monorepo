@@ -13,5 +13,5 @@ FROM nginx:stable-alpine
 WORKDIR /app
 COPY --from=build /app/apps/react-essentials/dist /etc/nginx/html/
 COPY --from=build /app/apps/react-essentials/nginx.conf /etc/nginx/nginx.conf
-EXPOSE 5511
+EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
