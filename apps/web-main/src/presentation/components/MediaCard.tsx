@@ -49,7 +49,6 @@ export const MediaCard: React.FC<MediaCardProps> = ({
                 <Button
                     size="small"
                     component="a"
-                    target="_blank"
                     rel="noopener noreferrer"
                     variant="contained"
                     href={`${window.location.origin}${route}`}
