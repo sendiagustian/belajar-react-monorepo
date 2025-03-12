@@ -15,7 +15,7 @@ export default defineConfig(({ mode }) => {
                     target:
                         mode === "development"
                             ? "http://localhost:5511"
-                            : "http://react-essentials:5511",
+                            : "http://192.168.16.189:5511",
                     changeOrigin: true,
                 },
                 "/tic-tac-toe": {

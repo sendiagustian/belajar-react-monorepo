@@ -11,7 +11,14 @@ RUN yarn run build --filter=./apps/web-main
 # production environment
 FROM nginx:stable-alpine
 WORKDIR /app
+
+COPY --from=build /app/apps/web-main/package.json /app/package.json
+COPY --from=build /app/apps/web-main/yarn.lock /app/yarn.lock
+COPY --from=build /app/apps/web-main/vite.config.ts /app/vite.config.ts
+
+RUN yarn install --force --production
+
 COPY --from=build /app/apps/web-main/dist /app/dist
-COPY --from=build /app/apps/web-main/nginx.conf /etc/nginx/nginx.conf
+
 EXPOSE 5510
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["yarn", "run", "preview"]

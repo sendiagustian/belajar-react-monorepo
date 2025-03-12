@@ -51,7 +51,7 @@ export const MediaCard: React.FC<MediaCardProps> = ({
                     component="a"
                     rel="noopener noreferrer"
                     variant="contained"
-                    href={`${window.location.origin}${route}`}
+                    href={`${window.location.origin}${route}/`}
                     sx={{ ":hover": { backgroundColor: "cyan[800]" }, color: "white" }}
                 >
                     Visit
