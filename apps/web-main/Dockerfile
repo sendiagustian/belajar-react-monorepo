@@ -12,12 +12,15 @@ RUN yarn run build --filter=./apps/web-main
 FROM node:22-alpine
 WORKDIR /app
 
-COPY --from=build /app/apps/web-main/package.json /app/package.json
-COPY --from=build /app/apps/web-main/vite.config.ts /app/vite.config.ts
+COPY --from=build /app/apps/web-main/ /app/apps/web-main/
+COPY --from=build /app/libs/ /app/libs
 
-RUN yarn install
+COPY --from=build /app/node_modules /app/node_modules
+COPY --from=build /app/yarn.lock /app/yarn.lock
+COPY --from=build /app/turbo.json /app/turbo.json
+COPY --from=build /app/package.json /app/package.json
 
-COPY --from=build /app/apps/web-main/dist /app/dist
+RUN cd /app/apps/web-main
 
 EXPOSE 5510
 CMD ["yarn", "run", "preview"]
