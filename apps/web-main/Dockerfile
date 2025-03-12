@@ -9,7 +9,7 @@ RUN yarn install --force
 RUN yarn run build --filter=./apps/web-main
 
 # production environment
-FROM nginx:stable-alpine
+FROM node:22-alpine
 WORKDIR /app
 
 COPY --from=build /app/apps/web-main/package.json /app/package.json
