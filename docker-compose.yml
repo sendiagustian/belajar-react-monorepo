@@ -10,7 +10,7 @@ services:
         hostname: web-main
         restart: always
         ports:
-            - "80:5510" # Tetap diekspos ke host
+            - "5510:5510" # Tetap diekspos ke host
         networks:
             - app-network
 
