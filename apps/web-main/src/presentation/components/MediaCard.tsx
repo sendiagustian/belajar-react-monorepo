@@ -21,6 +21,8 @@ export const MediaCard: React.FC<MediaCardProps> = ({
     subtitle,
     linkProject,
 }) => {
+    const host = import.meta.env.VITE_HOST;
+
     return (
         <Card sx={{ width: 250, display: "flex", flexDirection: "column" }} elevation={4}>
             <CardMedia sx={{ height: 150 }} image={image} title={title} />
@@ -50,7 +52,7 @@ export const MediaCard: React.FC<MediaCardProps> = ({
                     size="small"
                     variant="contained"
                     sx={{ ":hover": { backgroundColor: "cyan[800]" }, color: "white" }}
-                    onClick={() => (window.location.href = route)}
+                    onClick={() => (window.location.href = `${host}${route}`)}
                 >
                     Visit
                 </Button>
