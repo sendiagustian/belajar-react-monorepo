@@ -48,17 +48,23 @@ export const MediaCard: React.FC<MediaCardProps> = ({
             <CardActions sx={{ paddingBottom: 2 }}>
                 <Button
                     size="small"
+                    component="a"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     variant="contained"
+                    href={`${window.location.origin}${route}`}
                     sx={{ ":hover": { backgroundColor: "cyan[800]" }, color: "white" }}
-                    onClick={() => window.open(route)}
                 >
                     Visit
                 </Button>
                 <Button
                     size="small"
+                    component="a"
                     variant="contained"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={linkProject}
                     sx={{ ":hover": { backgroundColor: "cyan[800]" }, color: "white" }}
-                    onClick={() => window.open(linkProject)}
                 >
                     Code
                 </Button>
