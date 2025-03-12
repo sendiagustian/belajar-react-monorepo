@@ -13,5 +13,5 @@ FROM nginx:stable-alpine
 WORKDIR /app
 COPY --from=build /app/apps/investment-calculator/dist /etc/nginx/html/
 COPY --from=build /app/apps/investment-calculator/nginx.conf /etc/nginx/nginx.conf
-EXPOSE 80
+EXPOSE 5513
 CMD ["nginx", "-g", "daemon off;"]

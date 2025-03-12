@@ -6,7 +6,7 @@ export default defineConfig({
     plugins: [react()],
     base: "/tic-tac-toe/",
     server: {
-        port: 80,
+        port: 5512,
         host: "0.0.0.0",
         strictPort: true,
     },

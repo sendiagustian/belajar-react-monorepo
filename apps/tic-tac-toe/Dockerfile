@@ -13,5 +13,5 @@ FROM nginx:stable-alpine
 WORKDIR /app
 COPY --from=build /app/apps/tic-tac-toe/dist /etc/nginx/html/
 COPY --from=build /app/apps/tic-tac-toe/nginx.conf /etc/nginx/nginx.conf
-EXPOSE 80
+EXPOSE 5512
 CMD ["nginx", "-g", "daemon off;"]
