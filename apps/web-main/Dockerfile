@@ -4,7 +4,6 @@ WORKDIR /app
 
 COPY . ./
 
-RUN if ! command -v yarn > /dev/null; then npm install --global yarn; fi
 RUN yarn install --force
 RUN yarn run build --filter=./apps/web-main
 
@@ -12,7 +11,10 @@ RUN yarn run build --filter=./apps/web-main
 FROM node:22-alpine
 WORKDIR /app
 
-COPY --from=build /app/apps/web-main/ /app/apps/web-main/
+COPY --from=build /app/apps/web-main/dist /app/apps/web-main/dist
+COPY --from=build /app/apps/web-main/node_modules /app/apps/web-main/node_modules
+COPY --from=build /app/apps/web-main/package.json /app/apps/web-main/package.json
+COPY --from=build /app/apps/web-main/vite.config.ts /app/apps/web-main/vite.config.ts
 COPY --from=build /app/libs/ /app/libs
 
 COPY --from=build /app/node_modules /app/node_modules

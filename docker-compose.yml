@@ -14,38 +14,38 @@ services:
         networks:
             - app-network
 
-    react-essentials:
-        build:
-            context: .
-            dockerfile: ./apps/react-essentials/Dockerfile
-        container_name: react-essentials
-        hostname: react-essentials
-        restart: always
-        ports:
-            - "5511:5511" # Hanya tersedia dalam network
-        networks:
-            - app-network
+    # react-essentials:
+    #     build:
+    #         context: .
+    #         dockerfile: ./apps/react-essentials/Dockerfile
+    #     container_name: react-essentials
+    #     hostname: react-essentials
+    #     restart: always
+    #     ports:
+    #         - "5511:5511" # Hanya tersedia dalam network
+    #     networks:
+    #         - app-network
 
-    tic-tac-toe:
-        build:
-            context: .
-            dockerfile: ./apps/tic-tac-toe/Dockerfile
-        container_name: tic-tac-toe
-        hostname: tic-tac-toe
-        restart: always
-        ports:
-            - "5512:5512" # Hanya tersedia dalam network
-        networks:
-            - app-network
+    # tic-tac-toe:
+    #     build:
+    #         context: .
+    #         dockerfile: ./apps/tic-tac-toe/Dockerfile
+    #     container_name: tic-tac-toe
+    #     hostname: tic-tac-toe
+    #     restart: always
+    #     ports:
+    #         - "5512:5512" # Hanya tersedia dalam network
+    #     networks:
+    #         - app-network
 
-    investment-calculator:
-        build:
-            context: .
-            dockerfile: ./apps/investment-calculator/Dockerfile
-        container_name: investment-calculator
-        hostname: investment-calculator
-        restart: always
-        ports:
-            - "5513:5513" # Hanya tersedia dalam network
-        networks:
-            - app-network
+    # investment-calculator:
+    #     build:
+    #         context: .
+    #         dockerfile: ./apps/investment-calculator/Dockerfile
+    #     container_name: investment-calculator
+    #     hostname: investment-calculator
+    #     restart: always
+    #     ports:
+    #         - "5513:5513" # Hanya tersedia dalam network
+    #     networks:
+    #         - app-network
