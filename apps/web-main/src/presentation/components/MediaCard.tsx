@@ -50,7 +50,7 @@ export const MediaCard: React.FC<MediaCardProps> = ({
                     size="small"
                     variant="contained"
                     sx={{ ":hover": { backgroundColor: "cyan[800]" }, color: "white" }}
-                    onClick={() => (window.location.href = window.location.origin + route)}
+                    onClick={() => window.open(route)}
                 >
                     Visit
                 </Button>
