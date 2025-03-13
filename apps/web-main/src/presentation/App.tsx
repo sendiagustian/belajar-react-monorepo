@@ -1,25 +1,19 @@
-import { Box } from "@repo/ui/MaterialUI";
-import Footer from "../../../../libs/ui/src/core/Footer";
-import { Header } from "../../../../libs/ui/src/core/Header";
+// import { Catalogues } from "./components/Catalogues";
 import { Catalogues } from "./components/Catalogues";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Main from "./components/Main";
 // import "./App.css";
 
 function App() {
     return (
-        <Box
-            sx={{
-                display: "flex",
-                flexDirection: "column",
-                minHeight: "100vh",
-                pt: 8,
-            }}
-        >
+        <div className="flex flex-col min-h-screen">
             <Header />
-            <Box sx={{ flex: 1, display: "flex", flexDirection: "column" }}>
+            <Main>
                 <Catalogues />
-            </Box>
+            </Main>
             <Footer />
-        </Box>
+        </div>
     );
 }
 

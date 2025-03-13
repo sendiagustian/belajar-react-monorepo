@@ -1,10 +1,4 @@
 import * as React from "react";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
 
 interface MediaCardProps {
     route: string;
@@ -22,52 +16,35 @@ export const MediaCard: React.FC<MediaCardProps> = ({
     linkProject,
 }) => {
     return (
-        <Card sx={{ width: 250, display: "flex", flexDirection: "column" }} elevation={4}>
-            <CardMedia sx={{ height: 150 }} image={image} title={title} />
+        <a href={route} className="group relative block">
+            <div className="relative h-[250px] sm:h-[300px]">
+                <div className="bg-gray-200 absolute inset-0 h-full w-full object-cover opacity-20 group-hover:opacity-0" />
 
-            {/* CardContent sekarang fleksibel */}
-            <CardContent sx={{ flexGrow: 1 }}>
-                <Typography gutterBottom variant="h5" component="div" noWrap>
-                    {title}
-                </Typography>
-                <Typography
-                    variant="body2"
-                    sx={{
-                        color: "text.secondary",
-                        display: "-webkit-box",
-                        WebkitBoxOrient: "vertical",
-                        WebkitLineClamp: 3,
-                        overflow: "hidden",
+                <img
+                    alt=""
+                    src={image}
+                    className="absolute rounded-xl inset-0 h-full w-full object-cover opacity-80 group-hover:opacity-85"
+                />
+            </div>
+
+            <div className="absolute inset-0 flex flex-col items-start justify-end p-6">
+                <h3 className="text-xl font-medium text-white">{title}</h3>
+
+                <p className="mt-1.5 text-pretty text-xs text-white">{subtitle}</p>
+
+                <button
+                    className="cursor-pointer hover:scale-105"
+                    onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        window.open(linkProject, "_blank");
                     }}
                 >
-                    {subtitle}
-                </Typography>
-            </CardContent>
-
-            {/* Tombol selalu di bawah */}
-            <CardActions sx={{ paddingBottom: 2 }}>
-                <Button
-                    size="small"
-                    component="a"
-                    rel="noopener noreferrer"
-                    variant="contained"
-                    href={`${window.location.origin}${route}/`}
-                    sx={{ ":hover": { backgroundColor: "cyan[800]" }, color: "white" }}
-                >
-                    Visit
-                </Button>
-                <Button
-                    size="small"
-                    component="a"
-                    variant="contained"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href={linkProject}
-                    sx={{ ":hover": { backgroundColor: "cyan[800]" }, color: "white" }}
-                >
-                    Code
-                </Button>
-            </CardActions>
-        </Card>
+                    <span className="mt-3 rounded inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white">
+                        View Code
+                    </span>
+                </button>
+            </div>
+        </a>
     );
 };
