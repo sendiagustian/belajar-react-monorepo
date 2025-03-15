@@ -25,4 +25,13 @@ export const catalogues: CatalogueModel[] = [
         linkProject:
             "https://github.com/sendiagustian/belajar-react-monorepo/tree/main/apps/investment-calculator",
     },
+
+    {
+        route: "/styling",
+        image: "https://images.unsplash.com/photo-1524666643752-b381eb00effb?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        title: "Styling CSS",
+        subtitle: "A simple styling css and styled components.",
+        linkProject:
+            "https://github.com/sendiagustian/belajar-react-monorepo/tree/main/apps/styling",
+    },
 ];

@@ -17,7 +17,7 @@ const Header: React.FC = () => {
                     </div>
 
                     <div className="md:flex md:items-center md:gap-12">
-                        <p>Result of Learn React with Turborepo</p>
+                        <p className="hidden md:block">Result of Learn React with Turborepo</p>
                         {/* <nav aria-label="Global" className="hidden md:block">
                             <ul className="flex items-center gap-6 text-sm">
                                 <li>

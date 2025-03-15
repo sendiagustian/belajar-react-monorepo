@@ -21,6 +21,10 @@ export default defineConfig(({ mode }) => {
                     : "http://investment-calculator:5513",
             changeOrigin: true,
         },
+        "/styling": {
+            target: mode === "development" ? "http://localhost:5514" : "http://styling:5514",
+            changeOrigin: true,
+        },
     };
 
     return {
