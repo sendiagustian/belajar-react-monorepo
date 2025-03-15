@@ -49,3 +49,15 @@ services:
             - "5513:5513" # Hanya tersedia dalam network
         networks:
             - app-network
+
+    styling:
+        build:
+            context: .
+            dockerfile: ./apps/styling/Dockerfile
+        container_name: styling
+        hostname: styling
+        restart: always
+        ports:
+            - "5514:5514" # Hanya tersedia dalam network
+        networks:
+            - app-network
