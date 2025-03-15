@@ -5,8 +5,7 @@
     "type": "module",
     "main": "src/presentation/ReactEssentials.tsx",
     "exports": {
-        ".": "./src/presentation/ReactEssentials.tsx",
-        "./src/assets": "./src/assets"
+        ".": "./src/presentation/ReactEssentials.tsx"
     },
     "scripts": {
         "dev": "vite",
